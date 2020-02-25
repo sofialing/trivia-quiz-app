@@ -8,19 +8,16 @@ class App extends Component {
 		category: ''
 	};
 	startQuiz = category => {
-		console.log('new game');
 		this.setState({ quizStarted: true, category });
 	};
-	startNewQuiz = () => {
+	resetQuiz = () => {
 		this.setState({ quizStarted: false });
 	};
 	render() {
-		const content = this.state.quizStarted ? (
-			<Quiz category={this.state.category} onStartNewQuiz={this.startNewQuiz} />
-		) : (
-			<StartQuiz onStartQuiz={this.startQuiz} />
-		);
-		return <div className='App'>{content}</div>;
+		if (this.state.quizStarted) {
+			return <Quiz category={this.state.category} onResetQuiz={this.resetQuiz} />;
+		}
+		return <StartQuiz onStartQuiz={this.startQuiz} />;
 	}
 }
 

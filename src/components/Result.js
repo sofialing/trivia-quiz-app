@@ -7,7 +7,7 @@ const Result = props => {
 			<p className='lead mb-5'>
 				Your score: {props.score} / {props.number}
 			</p>
-			<button className='btn btn-secondary' onClick={props.onStartNewQuiz}>
+			<button className='btn btn-secondary' onClick={props.onResetQuiz}>
 				Start new quiz
 			</button>
 		</section>

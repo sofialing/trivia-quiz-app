@@ -42,6 +42,10 @@ class Quiz extends Component {
 		this.setState(prevState => ({ current: prevState.current + 1 }));
 	};
 
+	newGame = () => {
+		this.setState({ quizOver: false });
+	};
+
 	render() {
 		const { current, questions, quizOver, ready, score } = this.state;
 
@@ -59,7 +63,7 @@ class Quiz extends Component {
 				<Result
 					score={score}
 					number={questions.length}
-					onStartNewQuiz={this.props.onStartNewQuiz}
+					onResetQuiz={this.props.onResetQuiz}
 				/>
 			);
 		}

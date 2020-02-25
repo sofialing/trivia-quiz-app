@@ -21,15 +21,15 @@ class AnswerOptions extends Component {
 	};
 
 	render() {
-		const checkboxes = this.props.options.map(answer => (
-			<div className='form-check'>
+		const checkboxes = this.props.options.map((answer, index) => (
+			<div className='form-check' key={index}>
 				<input
 					className='form-check-input'
 					type='radio'
-					name='answer'
+					name='option'
 					value={answer}
-					key={answer}
 					onChange={this.onInputChange}
+					checked={this.state.answer === answer}
 				/>
 				<label className='form-check-label' htmlFor='answer'>
 					{Parser(answer)}
