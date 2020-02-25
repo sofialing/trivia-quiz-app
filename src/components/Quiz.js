@@ -17,10 +17,10 @@ class Quiz extends Component {
 	}
 
 	getQuestions = () => {
+		const { id } = this.props.category;
+		const url = `https://opentdb.com/api.php?amount=3&category=${id}&difficulty=easy&type=multiple`;
 		axios
-			.get(
-				'https://opentdb.com/api.php?amount=3&category=11&difficulty=easy&type=multiple'
-			)
+			.get(url)
 			.then(response =>
 				this.setState({ ready: true, questions: response.data.results })
 			)
@@ -51,6 +51,7 @@ class Quiz extends Component {
 					question={questions[current]}
 					number={current + 1}
 					onHandleResult={this.handleResult}
+					category={this.props.category.name}
 				/>
 			);
 		} else if (quizOver) {

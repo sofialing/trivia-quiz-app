@@ -4,17 +4,19 @@ import Quiz from './components/Quiz';
 
 class App extends Component {
 	state = {
-		quizStarted: false
+		quizStarted: false,
+		category: ''
 	};
-	startQuiz = () => {
-		this.setState({ quizStarted: true });
+	startQuiz = category => {
+		console.log('new game');
+		this.setState({ quizStarted: true, category });
 	};
 	startNewQuiz = () => {
 		this.setState({ quizStarted: false });
 	};
 	render() {
 		const content = this.state.quizStarted ? (
-			<Quiz onStartNewQuiz={this.startNewQuiz} />
+			<Quiz category={this.state.category} onStartNewQuiz={this.startNewQuiz} />
 		) : (
 			<StartQuiz onStartQuiz={this.startQuiz} />
 		);
