@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
+
+$font-family-sans-serif: 'Nunito';
+$primary: #f2c46d;
+$secondary: #03a678;
+
+$border-radius: 1rem;
+$border-radius-lg: 1rem;
+
+$input-btn-padding-y: 0.5rem;
+$input-btn-padding-x: 1rem;
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2rem;
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+	background-color: $primary;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 2rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+	width: 650px;
+}
+
+.card {
+	border-radius: 1rem;
+	border: none;
+
+	.card-body {
+		padding: 2rem 3rem;
+
+		.card-title {
+			font-size: 1rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		.card-subtitle {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+
+		.form-check {
+			padding-left: 1.75rem;
+			margin-bottom: 0.25rem;
+
+			.form-check-input {
+				margin-left: -1.75rem;
+			}
+		}
+	}
+}
