@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import Question from './Question'
+import Spinner from './Spinner'
 
 class Quiz extends Component {
 	state = {
@@ -76,17 +77,18 @@ class Quiz extends Component {
 
 		if (quizOver) {
 			return <Redirect to={redirectObj} />
-		} else if (loaded) {
-			return (
-				<Question
-					question={questions[current]}
-					number={current + 1}
-					onHandleResult={this.handleResult}
-					category={category}
-				/>
-			)
 		}
-		return ''
+
+		return loaded ? (
+			<Question
+				question={questions[current]}
+				number={current + 1}
+				onHandleResult={this.handleResult}
+				category={category}
+			/>
+		) : (
+			<Spinner />
+		)
 	}
 }
 
