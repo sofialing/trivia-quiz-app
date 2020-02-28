@@ -47,7 +47,7 @@ class QuizCategories extends Component {
 					{options}
 				</select>
 				<div className='input-group-append'>
-					<button className='btn btn-secondary' type='submit'>
+					<button className='btn btn-primary' type='submit'>
 						Start new quiz
 					</button>
 				</div>

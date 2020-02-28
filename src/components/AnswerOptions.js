@@ -11,7 +11,10 @@ class AnswerOptions extends Component {
 		if (!this.state.answer) {
 			return;
 		}
-		const res = this.state.answer === this.props.correct;
+		const res = {
+			correct: this.state.answer === this.props.correct,
+			answer: this.state.answer
+		};
 		this.setState({ answer: '' });
 		this.props.onHandleResult(res);
 	};

@@ -21,17 +21,39 @@ class Quiz extends Component {
 		const url = `https://opentdb.com/api.php?amount=3&category=${id}&difficulty=easy&type=multiple`;
 		axios
 			.get(url)
-			.then(response =>
-				this.setState({ ready: true, questions: response.data.results })
-			)
+			.then(response => {
+				const questions = response.data.results.map(data => {
+					return {
+						question: data.question,
+						correct_answer: data.correct_answer,
+						incorrect_answers: data.incorrect_answers,
+						user_answer: '',
+						correct: ''
+					};
+				});
+				this.setState({ ready: true, questions: questions });
+			})
 			.catch(error => console.error(error));
 	};
 
-	handleResult = correct => {
-		if (correct) {
+	handleResult = res => {
+		if (res.correct) {
 			this.setState(prevState => ({ score: prevState.score + 1 }));
 		}
+		this.saveUserAnswer(res);
 		this.showNextQuestion();
+	};
+
+	saveUserAnswer = res => {
+		const i = this.state.current;
+		const { correct, answer } = res;
+		const updatedQuestions = [...this.state.questions];
+		updatedQuestions[i] = {
+			...updatedQuestions[i],
+			user_answer: answer,
+			correct: correct
+		};
+		this.setState({ questions: updatedQuestions });
 	};
 
 	showNextQuestion = () => {
@@ -64,6 +86,7 @@ class Quiz extends Component {
 					score={score}
 					number={questions.length}
 					onResetQuiz={this.props.onResetQuiz}
+					questions={questions}
 				/>
 			);
 		}
