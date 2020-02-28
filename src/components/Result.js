@@ -1,32 +1,16 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
-import Parser from 'html-react-parser'
+import { ResultAnswers as Answers } from './ResultAnswers'
 
 const Result = props => {
 	const [showAnswers, setShowAnswers] = useState(false)
 	const [newGame, setNewGame] = useState(false)
 
-	// Check if user tries to access component without being redirected from quiz
 	if (!props.location.state) {
 		return <Redirect to='/' />
 	}
 
 	const { questions, score } = props.location.state.result
-	const answers = questions.map((item, i) => (
-		<li className='list-group-item' key={i}>
-			<span className='d-block font-weight-bold'>{Parser(item.question)}</span>
-			{item.correct ? (
-				<span className='d-block'>
-					Your answer: {Parser(item.user_answer)} is correct.
-				</span>
-			) : (
-				<span className='d-block'>
-					Your answer: {Parser(item.user_answer)} is incorrect. Correct answer
-					is {Parser(item.correct_answer)}.
-				</span>
-			)}
-		</li>
-	))
 
 	const toggleAnswers = () => {
 		setShowAnswers(!showAnswers)
@@ -54,11 +38,7 @@ const Result = props => {
 						Start new quiz
 					</button>
 
-					{showAnswers ? (
-						<ul className='list-group list-group-flush mt-4'>{answers}</ul>
-					) : (
-						''
-					)}
+					<Answers showAnswers={showAnswers} questions={questions} />
 				</div>
 			</div>
 		</section>
