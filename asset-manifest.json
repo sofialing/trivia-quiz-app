@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/quiz-trivia-app/static/css/main.73d3abe3.chunk.css",
-    "main.js": "/quiz-trivia-app/static/js/main.c182edd9.chunk.js",
-    "main.js.map": "/quiz-trivia-app/static/js/main.c182edd9.chunk.js.map",
-    "runtime-main.js": "/quiz-trivia-app/static/js/runtime-main.5b25e65e.js",
-    "runtime-main.js.map": "/quiz-trivia-app/static/js/runtime-main.5b25e65e.js.map",
-    "static/js/2.8e3c0e8c.chunk.js": "/quiz-trivia-app/static/js/2.8e3c0e8c.chunk.js",
-    "static/js/2.8e3c0e8c.chunk.js.map": "/quiz-trivia-app/static/js/2.8e3c0e8c.chunk.js.map",
-    "index.html": "/quiz-trivia-app/index.html",
-    "precache-manifest.8ccf970cf6acc508106d502212ab1075.js": "/quiz-trivia-app/precache-manifest.8ccf970cf6acc508106d502212ab1075.js",
-    "service-worker.js": "/quiz-trivia-app/service-worker.js",
-    "static/css/main.73d3abe3.chunk.css.map": "/quiz-trivia-app/static/css/main.73d3abe3.chunk.css.map",
-    "static/js/2.8e3c0e8c.chunk.js.LICENSE.txt": "/quiz-trivia-app/static/js/2.8e3c0e8c.chunk.js.LICENSE.txt"
+    "main.css": "/trivia-quiz-app/static/css/main.73d3abe3.chunk.css",
+    "main.js": "/trivia-quiz-app/static/js/main.c182edd9.chunk.js",
+    "main.js.map": "/trivia-quiz-app/static/js/main.c182edd9.chunk.js.map",
+    "runtime-main.js": "/trivia-quiz-app/static/js/runtime-main.2eb067d9.js",
+    "runtime-main.js.map": "/trivia-quiz-app/static/js/runtime-main.2eb067d9.js.map",
+    "static/js/2.8e3c0e8c.chunk.js": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js",
+    "static/js/2.8e3c0e8c.chunk.js.map": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js.map",
+    "index.html": "/trivia-quiz-app/index.html",
+    "precache-manifest.0ee5bf80f72ea6ccc96a73a1a0c61133.js": "/trivia-quiz-app/precache-manifest.0ee5bf80f72ea6ccc96a73a1a0c61133.js",
+    "service-worker.js": "/trivia-quiz-app/service-worker.js",
+    "static/css/main.73d3abe3.chunk.css.map": "/trivia-quiz-app/static/css/main.73d3abe3.chunk.css.map",
+    "static/js/2.8e3c0e8c.chunk.js.LICENSE.txt": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b25e65e.js",
+    "static/js/runtime-main.2eb067d9.js",
     "static/js/2.8e3c0e8c.chunk.js",
     "static/css/main.73d3abe3.chunk.css",
     "static/js/main.c182edd9.chunk.js"
