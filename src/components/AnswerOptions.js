@@ -1,44 +1,45 @@
-import React, { Component } from 'react';
-import Parser from 'html-react-parser';
+import React, { Component } from 'react'
+import Parser from 'html-react-parser'
 
 class AnswerOptions extends Component {
 	state = {
 		answer: ''
-	};
+	}
 
 	checkAnswer = e => {
-		e.preventDefault();
+		e.preventDefault()
 		if (!this.state.answer) {
-			return;
+			return
 		}
 		const res = {
 			correct: this.state.answer === this.props.correct,
 			answer: this.state.answer
-		};
-		this.setState({ answer: '' });
-		this.props.onHandleResult(res);
-	};
+		}
+		this.setState({ answer: '' })
+		this.props.onHandleResult(res)
+	}
 
 	onInputChange = e => {
-		this.setState({ answer: e.target.value });
-	};
+		this.setState({ answer: e.target.value })
+	}
 
 	render() {
 		const checkboxes = this.props.options.map((answer, index) => (
-			<div className='form-check' key={index}>
+			<div className='custom-control custom-radio' key={index}>
 				<input
-					className='form-check-input'
 					type='radio'
-					name='option'
+					id={answer}
+					name={answer}
+					className='custom-control-input'
 					value={answer}
 					onChange={this.onInputChange}
 					checked={this.state.answer === answer}
 				/>
-				<label className='form-check-label' htmlFor='answer'>
+				<label className='custom-control-label' htmlFor={answer}>
 					{Parser(answer)}
 				</label>
 			</div>
-		));
+		))
 
 		return (
 			<form onSubmit={this.checkAnswer}>
@@ -47,8 +48,8 @@ class AnswerOptions extends Component {
 					Next question
 				</button>
 			</form>
-		);
+		)
 	}
 }
 
-export default AnswerOptions;
+export default AnswerOptions

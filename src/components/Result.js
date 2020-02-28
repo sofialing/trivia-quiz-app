@@ -35,27 +35,31 @@ const Result = props => {
 	return newGame ? (
 		<Redirect to='/' />
 	) : (
-		<section className='card'>
-			<div className='card-body'>
-				<h2 className='card-title'>
-					Congratulations! You have completed the quiz.
-				</h2>
-				<h3 className='card-subtitle mb-3'>
-					You got {score} out of {questions.length} questions right.
-				</h3>
+		<section className='container'>
+			<div className='card mb-5 shadow-sm'>
+				<div className='card-body'>
+					<h2 className='card-title'>
+						Congratulations! You have completed the quiz.
+					</h2>
+					<h3 className='card-subtitle mb-3'>
+						You got {score} out of {questions.length} questions right.
+					</h3>
 
-				<button className='btn btn-secondary mr-3' onClick={toggleAnswers}>
-					Show correct answers
-				</button>
-				<button className='btn btn-secondary' onClick={() => setNewGame(true)}>
-					Start new quiz
-				</button>
+					<button className='btn btn-secondary mr-2' onClick={toggleAnswers}>
+						Show answers
+					</button>
+					<button
+						className='btn btn-secondary'
+						onClick={() => setNewGame(true)}>
+						Start new quiz
+					</button>
 
-				{showAnswers ? (
-					<ul className='list-group list-group-flush mt-4'>{answers}</ul>
-				) : (
-					''
-				)}
+					{showAnswers ? (
+						<ul className='list-group list-group-flush mt-4'>{answers}</ul>
+					) : (
+						''
+					)}
+				</div>
 			</div>
 		</section>
 	)

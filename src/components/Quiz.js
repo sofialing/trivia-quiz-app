@@ -65,7 +65,6 @@ class Quiz extends Component {
 	}
 
 	render() {
-		console.log(this.props)
 		const { current, questions, quizOver, loaded, score } = this.state
 		const category = this.props.location.state
 			? this.props.location.state.category

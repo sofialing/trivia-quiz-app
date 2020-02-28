@@ -12,6 +12,12 @@ $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 1rem;
 $input-btn-padding-y-lg: 1rem;
 $input-btn-padding-x-lg: 2rem;
+
+// $custom-control-indicator-checked-color: $secondary;
+$custom-control-indicator-checked-bg: $secondary;
+$custom-control-indicator-focus-box-shadow: none;
+$custom-control-indicator-focus-border-color: none;
+
 @import '~bootstrap/scss/bootstrap.scss';
 
 body {
@@ -21,19 +27,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
-	padding: 2rem;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .card {
-	border-radius: 1rem;
 	border: none;
-	width: 625px;
 
 	.card-body {
-		padding: 2rem 3rem;
-
 		.card-title {
 			font-size: 1rem;
 			font-weight: 600;
@@ -44,19 +45,36 @@ body {
 			font-size: 1.5rem;
 			font-weight: 700;
 		}
-
-		.form-check {
-			padding-left: 1.75rem;
-			margin-bottom: 0.25rem;
-
-			.form-check-input {
-				margin-left: -1.75rem;
-			}
-		}
 	}
 }
 
-.input-group {
-	width: 75%;
-	margin: 0 auto;
+.custom-control {
+	margin-bottom: 0.25 rem;
+	.custom-control-label {
+		padding-left: 0.25rem;
+	}
+}
+
+@media (min-width: 768px) {
+	#start {
+		width: 750px;
+	}
+
+	.card {
+		width: 625px;
+
+		.card-body {
+			padding: 2rem 3rem;
+		}
+	}
+
+	.input-group {
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+
+.form-check-input input[type='radio']:checked + label {
+	background-color: #bfb;
+	border-color: #4c4;
 }

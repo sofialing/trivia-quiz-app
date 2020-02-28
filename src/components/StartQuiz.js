@@ -3,7 +3,7 @@ import QuizCategories from './QuizCategories'
 
 const StartGame = () => {
 	return (
-		<section className='text-white text-center mb-5 container w-75'>
+		<section id='start' className='text-white text-center mb-5 container'>
 			<h1 className='display-3 font-weight-bold'>Trivia Quiz</h1>
 			<p className='lead mb-5'>
 				Are you a trivia master? Do you know a little about a lot? Put your skills
