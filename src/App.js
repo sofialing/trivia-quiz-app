@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
-import StartQuiz from './components/StartQuiz';
-import Quiz from './components/Quiz';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import StartQuiz from './components/StartQuiz'
+import Quiz from './components/Quiz'
+import Result from './components/Result'
 
 class App extends Component {
-	state = {
-		quizStarted: false,
-		category: ''
-	};
-	startQuiz = category => {
-		this.setState({ quizStarted: true, category });
-	};
-	resetQuiz = () => {
-		this.setState({ quizStarted: false });
-	};
 	render() {
-		if (this.state.quizStarted) {
-			return <Quiz category={this.state.category} onResetQuiz={this.resetQuiz} />;
-		}
-		return <StartQuiz onStartQuiz={this.startQuiz} />;
+		return (
+			<Router>
+				<Switch>
+					<Route exact path='/' component={StartQuiz}></Route>
+					<Route path='/quiz' component={Quiz}></Route>
+					<Route path='/result' component={Result}></Route>
+					<Redirect to='/' />
+				</Switch>
+			</Router>
+		)
 	}
 }
 
-export default App;
+export default App

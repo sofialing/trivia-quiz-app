@@ -1,19 +1,19 @@
-import React from 'react';
-import QuizCategories from './QuizCategories';
+import React from 'react'
+import QuizCategories from './QuizCategories'
 
-const StartGame = props => {
+const StartGame = () => {
 	return (
 		<section className='text-white text-center mb-5 container w-75'>
 			<h1 className='display-3 font-weight-bold'>Trivia Quiz</h1>
 			<p className='lead mb-5'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum
-				dictum auctor. Aenean elementum rhoncus felis, et fringilla massa posuere
-				sed. In hac habitasse platea dictumst. Ut semper orci nibh, in pharetra
-				arcu auctor volutpat. Phasellus eget augue nisi.
+				Are you a trivia master? Do you know a little about a lot? Put your skills
+				to the test and see how much you really know with this quiz! Choose a
+				category in which to play the Trivia Quiz from General Knowledge, Animals,
+				Entertainment, Geography and many more.
 			</p>
-			<QuizCategories onStartQuiz={props.onStartQuiz} />
+			<QuizCategories />
 		</section>
-	);
-};
+	)
+}
 
-export default StartGame;
+export default StartGame
