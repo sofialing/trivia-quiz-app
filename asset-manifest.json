@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/trivia-quiz-app/static/css/main.8bcd7716.chunk.css",
-    "main.js": "/trivia-quiz-app/static/js/main.4f2f7b38.chunk.js",
-    "main.js.map": "/trivia-quiz-app/static/js/main.4f2f7b38.chunk.js.map",
+    "main.js": "/trivia-quiz-app/static/js/main.2c88cabb.chunk.js",
+    "main.js.map": "/trivia-quiz-app/static/js/main.2c88cabb.chunk.js.map",
     "runtime-main.js": "/trivia-quiz-app/static/js/runtime-main.2eb067d9.js",
     "runtime-main.js.map": "/trivia-quiz-app/static/js/runtime-main.2eb067d9.js.map",
-    "static/js/2.8e3c0e8c.chunk.js": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js",
-    "static/js/2.8e3c0e8c.chunk.js.map": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js.map",
+    "static/js/2.89532237.chunk.js": "/trivia-quiz-app/static/js/2.89532237.chunk.js",
+    "static/js/2.89532237.chunk.js.map": "/trivia-quiz-app/static/js/2.89532237.chunk.js.map",
     "index.html": "/trivia-quiz-app/index.html",
-    "precache-manifest.b883483a488aa4e470f84c8f4899afd9.js": "/trivia-quiz-app/precache-manifest.b883483a488aa4e470f84c8f4899afd9.js",
+    "precache-manifest.b18e8ec5a7ee1acd69af985f62fe392b.js": "/trivia-quiz-app/precache-manifest.b18e8ec5a7ee1acd69af985f62fe392b.js",
     "service-worker.js": "/trivia-quiz-app/service-worker.js",
     "static/css/main.8bcd7716.chunk.css.map": "/trivia-quiz-app/static/css/main.8bcd7716.chunk.css.map",
-    "static/js/2.8e3c0e8c.chunk.js.LICENSE.txt": "/trivia-quiz-app/static/js/2.8e3c0e8c.chunk.js.LICENSE.txt"
+    "static/js/2.89532237.chunk.js.LICENSE.txt": "/trivia-quiz-app/static/js/2.89532237.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2eb067d9.js",
-    "static/js/2.8e3c0e8c.chunk.js",
+    "static/js/2.89532237.chunk.js",
     "static/css/main.8bcd7716.chunk.css",
-    "static/js/main.4f2f7b38.chunk.js"
+    "static/js/main.2c88cabb.chunk.js"
   ]
 }
