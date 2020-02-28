@@ -2,8 +2,7 @@
 
 # Trivia Quiz App
 
-A Weather app that fetches weather forecast from OpenWeatherMap.org based on user's location.
-Different backgrounds and weather icons based on current weather.
+A trivia quiz app with multiple categories, using the Open Trivia Database.
 
 ## Demo
 
