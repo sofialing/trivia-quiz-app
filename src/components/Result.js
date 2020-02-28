@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import { ResultAnswers as Answers } from './ResultAnswers'
+import ProgressBar from './ProgressBar'
 
 const Result = props => {
 	const [showAnswers, setShowAnswers] = useState(false)
@@ -25,7 +26,8 @@ const Result = props => {
 					<h2 className='card-title'>
 						Congratulations! You have completed the quiz.
 					</h2>
-					<h3 className='card-subtitle mb-3'>
+					<ProgressBar number='100' />
+					<h3 className='card-subtitle mb-4'>
 						You got {score} out of {questions.length} questions right.
 					</h3>
 

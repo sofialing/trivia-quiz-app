@@ -20,7 +20,9 @@ const ResultAnswers = props => {
 	))
 
 	return showAnswers ? (
-		<ul className='list-group list-group-flush mt-4'>{answers}</ul>
+		<div className='overflow-auto mt-4' style={{ height: '50vh' }}>
+			<ul className='list-group list-group-flush '>{answers}</ul>
+		</div>
 	) : (
 		''
 	)

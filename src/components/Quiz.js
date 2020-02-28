@@ -82,7 +82,7 @@ class Quiz extends Component {
 		return loaded ? (
 			<Question
 				question={questions[current]}
-				number={current + 1}
+				number={current}
 				onHandleResult={this.handleResult}
 				category={category}
 			/>
