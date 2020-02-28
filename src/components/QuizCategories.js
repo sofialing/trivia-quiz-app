@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import categories from './modules/categories'
+import categories from '../modules/categories'
 
 class QuizCategories extends Component {
 	state = {
